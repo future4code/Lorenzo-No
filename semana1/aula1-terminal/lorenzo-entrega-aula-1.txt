@@ -1,0 +1,45 @@
+COMANDOS
+
+$ cat README.md
+$ cat inicio
+$ cd misterio/
+$ grep PISTA cena-do-crime
+$ grep Annabel pessoas
+$ cd ruas/
+$ sed -n 179p Vila_Buckingham
+$ cd ..
+$ cd entrevistas/
+$ ls | grep 699607
+$ cat entrevista-699607
+$ cd ..
+$ grep -A 5 "L337" automoveis
+$ grep "Jeremy Bowers" pessoas
+$ cd ruas/
+$ sed -n 284p Travessa_Dunstable
+$ cd ..
+$ cd entrevistas/
+$ ls | grep 9620713
+$ cat entrevista-9620713
+$ cd ..
+$ grep -r "Jeremy Bowers" ./associacoes/
+
+
+
+CONCLUSÃO
+
+Jeremy Bowers é o único indivíduo que bate com as descrições, não fez a entrevista e possui carteirinha das 4 associações, sendo o principal suspeito do assassinato.
+
+
+
+ELIMINADOS POR TENTATIVA E ERRO
+
+Annabel:
+Annabel Sun
+
+Honda Azul/Petróleo com início "L337" e fim "9":
+Mike Bostock
+Erika Owens
+Aron Pilhofer
+Heather Billings
+Joe Germuska
+Jacqui Maher
