@@ -1,0 +1,103 @@
+/* @font-face {
+    font-family: 'Cozy-Caps';
+    src: url('cozy-caps.woff2') format('woff2'),
+         url('cozy-caps.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    text-decoration: none;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vh;
+    font-weight: bold;
+    background-color: #ca8b69;
+}
+
+header {
+    padding: 3vh 4vw;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+nav a {
+    padding: 0 1vh;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px 30px 0;
+    color: #291e1c;
+}
+
+#me {
+    padding: 30px 0 40px;
+    display: flex;
+    color: #291e1c;
+}
+
+div {
+    padding: 0 20px;
+    width: 50%;
+}
+
+#myPicture {
+    text-align: right;
+}
+
+#myPicture * {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+#aboutMe * {
+    color: #291e1c;
+    max-width: 60%;
+}
+
+#projects {
+    padding: 20px;
+    background-color: #cba895;
+}
+
+#projects h2 {
+    text-align: center;
+}
+
+footer {
+    padding: 2vh 4vw;
+}
+
+footer > a {
+    padding: 1vh;
+}
+
+footer div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#network img {
+    max-height: 4vh;
+    padding: 0 1vw;
+}

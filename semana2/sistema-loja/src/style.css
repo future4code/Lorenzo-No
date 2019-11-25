@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 4vw;
+    font-size: 2vh;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+main {
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+h1, h2 {
+    margin: 2vh auto;
+}
+
+table {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.product {
+    max-height: 100px;
+}
+
+#showcase {
+    background-image: url("/img/showcase.webp");
+    background-size: cover;
+    background-position: center;
+    height: 83.2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
