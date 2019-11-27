@@ -1,0 +1,16 @@
+#profile-picture {
+    text-align: right;
+}
+
+#profile-picture * {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+#about-me {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
