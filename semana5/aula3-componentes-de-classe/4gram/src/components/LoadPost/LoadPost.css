@@ -1,0 +1,50 @@
+section {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 400px;
+  margin: 2vh 1vw;
+  border: 1px solid black;
+}
+
+section > div {
+  display: flex;
+  padding: 1%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.post-header img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+h4 {
+  margin: auto 0 auto 5px;
+}
+
+div.post-photo {
+  padding: 0;
+}
+
+div.post-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1% 1%;
+}
+
+div.like, div.comment {
+  display: flex;
+  /* Como centralizar, tanto horizontalmente, quanto verticalmente, o número de likes e comentários? */
+}
+
+div.like img, div.comment img {
+  padding: 0 4%;
+}
+
+input {
+    width: 100%;
+}
