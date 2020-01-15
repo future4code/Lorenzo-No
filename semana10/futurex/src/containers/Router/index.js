@@ -4,9 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import LoginPage from "../LoginPage";
 
 
-
-
-const routes = {
+export const routes = {
   root: "/",
   applicationForm: "/application-form",
   login: "/login",
@@ -19,12 +17,12 @@ function Router(props) {
   return (
     <ConnectedRouter history={props.history}>
       <Switch>
-        <Route path={routes.root} component={LoginPage} />
-        <Route path={routes.applicationForm} component={LoginPage} />
-        <Route path={routes.login} component={LoginPage} />
-        <Route path={routes.createTrip} component={LoginPage} />
-        <Route path={routes.tripList} component={LoginPage} />
-        <Route path={routes.tripDetails} component={LoginPage} />
+        <Route path={routes.root} component={LoginPage} exact />
+        <Route path={routes.applicationForm} component={LoginPage} exact />
+        <Route path={routes.login} component={LoginPage} exact />
+        <Route path={routes.createTrip} component={LoginPage} exact />
+        <Route path={routes.tripList} component={LoginPage} exact />
+        <Route path={routes.tripDetails} component={LoginPage} exact />
       </Switch>
     </ConnectedRouter>
   );

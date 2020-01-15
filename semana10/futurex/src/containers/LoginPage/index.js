@@ -48,10 +48,14 @@ class LoginPage extends Component {
           label="Password"
           value={password}
         />
-        <Button>Login</Button>
+        <Button onClick={this.props.goToLogin}>Login</Button>
       </LoginWrapper>
     );
   }
 }
 
-export default LoginPage;
+const mapDispatchToProps = dispatch => ({
+  goToLogin: () => dispatch(push("trips/list"))
+})
+
+export default connect(null, mapDispatchToProps)(LoginPage);
