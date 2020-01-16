@@ -2,6 +2,7 @@ import React from "react";
 import { ConnectedRouter } from "connected-react-router";
 import { Switch, Route } from "react-router-dom";
 import LoginPage from "../LoginPage";
+import TripList from "../TripList";
 
 
 export const routes = {
@@ -21,7 +22,7 @@ function Router(props) {
         <Route path={routes.applicationForm} component={LoginPage} exact />
         <Route path={routes.login} component={LoginPage} exact />
         <Route path={routes.createTrip} component={LoginPage} exact />
-        <Route path={routes.tripList} component={LoginPage} exact />
+        <Route path={routes.tripList} component={TripList} exact />
         <Route path={routes.tripDetails} component={LoginPage} exact />
       </Switch>
     </ConnectedRouter>
