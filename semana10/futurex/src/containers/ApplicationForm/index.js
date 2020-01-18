@@ -5,7 +5,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import styled from "styled-components";
 
-class TripList extends Component {
+class ApplicationForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,7 @@ class TripList extends Component {
 
   render() {
     return(
-      <p onClick={this.props.goToSomewhere}>olá</p>
+      <p onClick={this.props.goToSomewhere}>oaaaaaai</p>
     )
   }
 }
@@ -24,4 +24,4 @@ const mapDispatchToProps = dispatch => ({
   goToSomewhere: () => dispatch(push('/'))
 })
 
-export default connect(null, mapDispatchToProps)(TripList)
+export default connect(null, mapDispatchToProps)(ApplicationForm)
