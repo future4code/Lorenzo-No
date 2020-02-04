@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
+import Input from '../../components/Input'
 import styled from "styled-components";
-import LanguageChooser from "../../containers/LanguageChooser";
-import { changePlanetAction } from "../../actions/planet";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -53,28 +52,29 @@ const App = props => {
     <AppWrapper>
       <img width="200px" src={planetImage} />
       <h2>{selectedText}</h2>
-      <LanguageChooser />
       <button onClick={() => props.changePlanet("Terra")}>Terra</button>
       <button onClick={() => props.changePlanet("Saturno")}>Saturno</button>
-      <input placeholder='O que é que tem que ser feito agora?' />
-      {props.taskList}
+      <Input/>
+      {/* <input placeholder='O que é que tem que ser feito agora?'/>
+      <button onClick={() => props.addTask}>Ok</button> */}
+      {/* {props.taskList} */}
     </AppWrapper>
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    selectedLanguage: state.languages.selectedLanguage,
-    selectedPlanet: state.planets.selectedPlanet,
-    taskList: state.tasks.taskList
-  };
-};
+// const mapStateToProps = state => {
+//   return {
+//     selectedLanguage: state.languages.selectedLanguage,
+//     selectedPlanet: state.planets.selectedPlanet,
+//     taskList: state.tasks.taskList
+//   };
+// };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    changePlanet: planet => dispatch(changePlanetAction(planet))
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     changePlanet: planet => dispatch(changePlanetAction(planet))
+//   };
+// };
 
 export default connect(
   mapStateToProps,
