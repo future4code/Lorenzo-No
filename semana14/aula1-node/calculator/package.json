@@ -1,0 +1,17 @@
+{
+  "name": "calculator-for-dummies",
+  "version": "1.0.0",
+  "description": "A calculator for dummies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "calculator",
+    "dummies",
+    "node"
+  ],
+  "author": "Lorenzo No",
+  "license": "ISC"
+}
