@@ -1,0 +1,18 @@
+{
+  "name": "sistema-bancario",
+  "version": "1.0.0",
+  "description": "POC: Sistema Bancário",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sistema",
+    "bancario"
+  ],
+  "author": "Lorenzo No",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^13.7.1"
+  }
+}
