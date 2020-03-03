@@ -40,7 +40,7 @@ DESCRIBE country;
 -- 1.
 SELECT *
 FROM country
-WHERE Population > 100000
+WHERE Population > 100000 -- Isso acabou nem fazendo diferença
 ORDER BY Population DESC
 LIMIT 100;
 
