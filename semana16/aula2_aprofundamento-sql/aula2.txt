@@ -1,0 +1,139 @@
+-- # QUERIES
+
+-- EXERCÍCIO 1
+USE exercicios;
+DESCRIBE city;
+
+-- 1.
+SELECT *
+FROM city
+ORDER BY Population DESC
+LIMIT 5;
+
+
+-- 2.
+SELECT District, AVG(Population)
+FROM city
+GROUP BY 1
+ORDER BY 1 ASC;
+
+
+-- 3.
+SELECT District, COUNT(*)
+FROM city
+GROUP BY 1
+ORDER BY 1 ASC;
+
+
+-- 4.
+SELECT CountryCode, COUNT(*)
+FROM city
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10;
+
+
+
+-- EXERCÍCIO 2
+DESCRIBE country;
+
+-- 1.
+SELECT *
+FROM country
+WHERE Population > 100000 -- Isso acabou nem fazendo diferença
+ORDER BY Population DESC
+LIMIT 100;
+
+
+-- 2.
+SELECT COUNT(*)
+FROM country
+WHERE Population > 5000000;
+
+
+-- 3.
+SELECT SUM(Population)
+AS "Soma da População"
+FROM country
+WHERE Continent = "Asia";
+
+
+-- 4.
+SELECT
+	(SELECT COUNT(*)
+	FROM country
+	WHERE GovernmentForm LIKE "%Republic%") AS "Republic",
+	(SELECT COUNT(*)
+	FROM country
+	WHERE GovernmentForm LIKE "%Monarchy%") AS "Monarchy";
+
+
+-- 5.
+SELECT GovernmentForm, COUNT(*)
+FROM country
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 1;
+
+
+-- 6.
+SELECT Continent, AVG(Population)
+FROM country
+GROUP BY 1;
+
+
+-- 7.
+SELECT *
+FROM country
+ORDER BY IndepYear DESC
+LIMIT 10;
+
+
+-- 8.
+SELECT LOWER(Continent), AVG(LifeExpectancy)
+FROM country
+GROUP BY 1;
+
+
+-- 9.
+SELECT Continent, SUM(SurfaceArea)
+FROM country
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 3;
+
+
+
+
+
+-- # ESCRITA
+USE `bouman-lorenzo`;
+
+TRUNCATE TABLE films;
+
+INSERT INTO films
+SELECT *
+FROM exercicios.films
+LIMIT 10; -- Desculpa, sem criatividade para criar filmes :x
+
+-- 1.
+ALTER TABLE films
+ADD watched BOOL NOT NULL DEFAULT FALSE;
+
+
+-- 2.
+UPDATE films
+SET watched = TRUE
+WHERE rating = "PG-13"
+OR rating = "R"
+OR rating = "NC-17";
+
+
+-- 3.
+ALTER TABLE films
+ADD lucky_number INT NOT NULL DEFAULT 0;
+
+
+-- 4.
+UPDATE films
+SET lucky_number = FLOOR(RAND()*1000+1);
