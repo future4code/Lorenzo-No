@@ -1,0 +1,46 @@
+USE `bouman-lorenzo`;
+
+CREATE TABLE autores(
+	id INT PRIMARY KEY,
+	primeiro_nome varchar(255),
+	ultimo_nome varchar(255)
+);
+
+CREATE TABLE editoras(
+	id INT PRIMARY KEY,
+	nome varchar(255),
+	cidade varchar(255),
+	data_fundacao date
+);
+
+CREATE TABLE usuarios(
+	id INT PRIMARY KEY,
+	primeiro_nome varchar(255),
+	ultimo_nome varchar(255),
+	nacionalidade varchar(255),
+	data_nascimento date
+);
+
+CREATE TABLE livros(
+	id INT PRIMARY KEY,
+	titulo varchar(255),
+	autor_id INT,
+	editora_id INT,
+	ano date,
+	FOREIGN KEY (autor_id) REFERENCES autores(id),
+	FOREIGN KEY (editora_id) REFERENCES editoras(id)
+);
+
+CREATE TABLE usuarios_livros(
+	usuario_id INT,
+	livro_id INT,
+	PRIMARY KEY (usuario_id, livro_id),
+	FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+	FOREIGN KEY (livro_id) REFERENCES livros(id)
+);
+
+SELECT CONCAT(ultimo_nome, ", ", primeiro_nome) AS autor, titulo
+FROM autores
+JOIN livros
+ON autores.id = livros.autor_id
+WHERE primeiro_nome = "BILL";
