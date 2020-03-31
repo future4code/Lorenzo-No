@@ -4,7 +4,7 @@ import { UserGateway } from "../business/gateways/userGateway";
 
 export class UserDB extends BaseDB implements UserGateway {
   private users = "futurebook_users";
-  private relationTableName = "user_relations"
+  private relations = "user_relations"
 
   private mapDBUserToUser(input?: any): User | undefined {
     return (
@@ -42,5 +42,28 @@ export class UserDB extends BaseDB implements UserGateway {
     }
 
     return this.mapDBUserToUser(result[0][0])
+  }
+
+  public async makeFriendship(userId: string, friendId: string): Promise<void> {
+    await this.connection.raw(`
+      INSERT INTO ${this.relations} (user_id, friend_id) 
+      VALUES
+        ('${userId}','${friendId}'),
+        ('${friendId}','${userId}');
+      `)
+  }
+
+  public async undoFriendship(userId: string, friendId: string): Promise<void> {
+    await this.connection.raw(`
+      DELETE FROM ${this.relations}
+      WHERE user_id = '${userId}'
+      AND friend_id = '${friendId}';
+    `)
+
+    await this.connection.raw(`
+      DELETE FROM ${this.relations}
+      WHERE user_id = '${friendId}'
+      AND friend_id = '${userId}';
+  `)
   }
 }

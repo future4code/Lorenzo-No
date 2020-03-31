@@ -33,7 +33,6 @@ export class SignUpUC {
         }
       }
     } catch (err) {
-      console.log(err)
       throw new Error(`Error: failed to register user. ${err}`)
     }
   }
