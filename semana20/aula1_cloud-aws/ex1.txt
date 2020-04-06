@@ -1,0 +1,10 @@
+3.
+ssh -i future4-aws-ec2.pem ubuntu@34.201.160.192
+
+4.
+git clone https://github.com/future4code/4eddit-bouman-1.git
+cd 4eddit-bouman-1/
+npm install
+npm run start
+
+7. Não senti diferença significante. Nos dois casos, usei o terminal para usar comandos básciso.
